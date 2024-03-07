@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import Hero from "@/assets/hero-1.png";
+import PlayStore from "@/icons/playstore.astro";
+---
+
+<Layout title="Bienvenido a FinTrack">
+  <section class="flex-1">
+    <div class="w-full relative pb-10 lg:pb-0 px-6 lg:px-0">
+      <div class="md:pt-32 pt-7 lg:flex items-center">
+        <div class="w-full lg:w-1/2 h-full">
+          <Image src={Hero} alt="Hero image" class="mx-auto" />
+        </div>
+        <div class="w-full lg:w-1/2 h-full">
+          <h1
+            tabindex="0"
+            class="text-indigo-950 text-5xl lg:text-7xl font-outfit font-bold mb-8"
+          >
+            Controlá tus finanzas
+          </h1>
+          <p tabindex="0" class="text-indigo-950/80 font-outfit mb-8">
+            FinTrack es tu compañero de confianza para el seguimiento de tus
+            finanzas personales. Con una interfaz intuitiva y fácil de usar,
+            esta aplicación te permite registrar tus ingresos y gastos mensuales
+            de manera eficiente. Analiza tus gastos mediante estadísticas
+            detalladas y gráficos interactivos. Además, podrás acceder a un
+            historial completo de tus gastos y realizar modificaciones según sea
+            necesario.
+          </p>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.controldecostos"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex h-12 gap-2 animate-background-shine items-center justify-center rounded-md bg-[linear-gradient(110deg,#1e1b4b,45%,#1e2631,55%,#4c578b)] bg-[length:200%_100%] px-6 transition-colors"
+          >
+            <PlayStore />
+            <span class="font-outfit font-bold text-[#f1f2f6]"
+              >Descarga la app</span
+            >
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

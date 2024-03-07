@@ -1,0 +1,40 @@
+---
+import Linkedin from "@/icons/linkedin.astro";
+import Github from "@/icons/github.astro";
+import Email from "@/icons/email.astro";
+import Logo from "@/components/Logo.astro";
+
+const email = "marceelodominguez@gmail.com";
+const name = "Marcelo Dominguez";
+---
+
+<footer class="flex justify-between items-center py-6 px-2">
+  <Logo />
+  <div class="flex gap-2">
+    <a
+      href={`mailto:${email}`}
+      title={`Enviar un correo electrónico a ${name} al correo ${email}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-indigo-950 transition duration-300 ease-in-out hover:text-indigo-700"
+    >
+      <Email />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/marcelo-dominguez-351570194/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-indigo-950 transition duration-300 ease-in-out hover:text-indigo-700"
+    >
+      <Linkedin />
+    </a>
+    <a
+      href="https://github.com/MarceeloDominguez"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-indigo-950 transition duration-300 ease-in-out hover:text-indigo-700"
+    >
+      <Github />
+    </a>
+  </div>
+</footer>
