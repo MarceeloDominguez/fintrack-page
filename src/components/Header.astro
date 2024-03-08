@@ -1,11 +1,5 @@
 ---
-import Linkedin from "@/icons/linkedin.astro";
-import Github from "@/icons/github.astro";
-import Email from "@/icons/email.astro";
 import Logo from "@/components/Logo.astro";
-
-const email = "marceelodominguez@gmail.com";
-const name = "Marcelo Dominguez";
 ---
 
 <header class="flex items-center justify-between py-6 px-2">
@@ -14,32 +8,5 @@ const name = "Marcelo Dominguez";
     <span class="font-outfit font-bold text-indigo-950 md:text-4xl text-3xl"
       >FinTrack</span
     >
-  </div>
-  <div class="flex gap-2">
-    <a
-      href={`mailto:${email}`}
-      title={`Enviar un correo electrónico a ${name} al correo ${email}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="text-indigo-950 transition duration-300 ease-in-out hover:text-[#4c578b]"
-    >
-      <Email />
-    </a>
-    <a
-      href="https://www.linkedin.com/in/marcelo-dominguez-351570194/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="text-indigo-950 transition duration-300 ease-in-out hover:text-[#4c578b]"
-    >
-      <Linkedin />
-    </a>
-    <a
-      href="https://github.com/MarceeloDominguez"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="text-indigo-950 transition duration-300 ease-in-out hover:text-[#4c578b]"
-    >
-      <Github />
-    </a>
   </div>
 </header>

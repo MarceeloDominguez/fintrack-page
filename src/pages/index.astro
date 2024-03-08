@@ -2,15 +2,22 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import Hero from "@/assets/hero-1.png";
+import About1 from "@/assets/about-1.png";
+import About2 from "@/assets/about-2.png";
 import PlayStore from "@/icons/playstore.astro";
 ---
 
 <Layout title="Bienvenido a FinTrack">
-  <section class="flex-1">
-    <div class="w-full relative pb-10 lg:pb-0 px-6 lg:px-0">
-      <div class="md:pt-32 pt-7 lg:flex items-center">
-        <div class="w-full lg:w-1/2 h-full">
-          <Image src={Hero} alt="Hero image" class="mx-auto" />
+  <main class="flex-1">
+    <section class="w-full relative pb-10 lg:pb-0 px-6 lg:px-0 md:mb-10">
+      <div class="md:pt-32 pt-7 lg:flex lg:gap-6 items-center">
+        <div class="lg:w-1/2 h-full">
+          <Image
+            src={Hero}
+            alt="principal home"
+            class="mx-auto"
+            loading="eager"
+          />
         </div>
         <div class="w-full lg:w-1/2 h-full">
           <h1
@@ -19,7 +26,7 @@ import PlayStore from "@/icons/playstore.astro";
           >
             Controlá tus finanzas
           </h1>
-          <p tabindex="0" class="text-indigo-950/80 font-outfit mb-8">
+          <p class="text-indigo-950/80 font-outfit mb-8 lg:mr-20">
             FinTrack es tu compañero de confianza para el seguimiento de tus
             finanzas personales. Con una interfaz intuitiva y fácil de usar,
             esta aplicación te permite registrar tus ingresos y gastos mensuales
@@ -41,6 +48,46 @@ import PlayStore from "@/icons/playstore.astro";
           </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <section class="w-full relative pb-10 lg:pb-0 px-6 lg:px-0 md:mb-20">
+      <div class="md:pt-32 pt-4 lg:flex lg:gap-6 items-center">
+        <div class="w-full lg:w-1/2 h-full order-1 lg:order-2">
+          <h1
+            tabindex="0"
+            class="text-indigo-950 text-5xl lg:text-7xl font-outfit font-bold mb-8 lg:mr-4"
+          >
+            Registrá tus gastos e ingresos
+          </h1>
+          <p class="text-indigo-950/80 font-outfit mb-8 lg:mr-20">
+            Con nuestro sencillo proceso de registro, podrás comenzar a
+            registrar tus gastos de inmediato. Descubre una forma intuitiva y
+            rápida de mantener un seguimiento detallado de tus gastos e ingresos
+            diarios.
+          </p>
+        </div>
+        <div class="w-full lg:w-1/2 h-full mb-4 order-2 lg:order-1">
+          <Image src={About1} alt="about 2" class="mx-auto" loading="eager" />
+        </div>
+      </div>
+    </section>
+    <section class="w-full relative pb-10 lg:pb-0 px-6 lg:px-0 md:mb-20">
+      <div class="md:pt-32 pt-4 lg:flex lg:gap-6 items-center">
+        <div class="w-full lg:w-1/2 h-full order-2 lg:order-1">
+          <h1
+            class="text-indigo-950 text-5xl lg:text-7xl font-outfit font-bold mb-8 lg:ml-2 lg:mr-2"
+          >
+            Revisa las estadísticas de tus finanzas
+          </h1>
+          <p class="text-indigo-950/80 font-outfit mb-8 lg:ml-2 lg:mr-20">
+            Con un solo vistazo, obtén información detallada sobre tus gastos e
+            ingresos utilizando la sección de estadísticas. Analiza fácilmente
+            tu comportamiento financiero y visualiza tu progreso mensual.
+          </p>
+        </div>
+        <div class="w-full lg:w-1/2 h-full mb-4 order-1 lg:order-2">
+          <Image src={About2} alt="about 2" class="mx-auto" loading="eager" />
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
